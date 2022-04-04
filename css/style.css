@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+:root {
+    --primary-color: rgb(3, 133, 89);
+    --secondary-color: rgb(3, 168, 3);
+    --dark-color: rgb(2, 65, 2);
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    line-height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 10px 0px;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+p {
+    margin: 10px 0px;
+}
+
+img {
+    width: 100%;
+}
+
+/* header background */
+
+.head-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-bg.jpg");
+    position: relative;
+}
+
+.head-background::before {
+    content: '';
+    position: absolute;
+    background-color: var(--light-color);
+    height: 100px;
+    right: 0px;
+    left: 0px;
+    bottom: -50px;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/* navbar */
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul a {
+    margin: 0px 7px;
+    padding: 10px;
+}
+
+.navbar ul a:hover {
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: bold;
+    color: #fff;
+}
+
+/* header content */
+
+.header-content {
+    height: 60vh;
+    text-align: center;
+    /* border: 2px solid green; */
+    animation: slideInFromTop 1s ease-in;
+}
+
+.header-content .flex {
+    flex-direction: column;
+}
+
+.header-content .container {
+    max-width: 750px;
+}
+
+.header-content a {
+    display: inline;
+    color: #fff;
+}
+
+.btn-container {
+    margin: 25px 0px;
+}
+
+/* why us */
+
+.why-us {
+    height: 50vh;
+    margin-left: 10px;
+    background-color: var(--light-color);
+}
+
+.why-us-content {
+    position: relative;
+    top: -57px;
+}
+
+.why-us-content a {
+    color: #333;
+}
+
+.why-us-content .lead {
+    border-bottom: 15px;
+}
+
+/* completed projects */
+
+.completed-projects .flex {
+    gap: 10px;
+}
+
+.completed-photos img {
+    max-width: 750px;
+    height: 350px;
+}
+
+.completed-photos h3 {
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.completed-projects .border-bottom {
+    margin: 0 auto;
+    position: relative;
+    left: -211px;
+}
+
+.completed-projects .grid {
+    margin-top: 30px;
+}
+
+.completed-projects .btn-container {
+    width: 10%;
+    margin: 20px auto;
+}
+
+/* our videoes */
+
+.our-videos {
+    height: 50vh;
+    background-color: var(--light-color);
+}
+
+.video-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* our process */
+
+.process-steps, .process-details {
+    margin-top: 33px;
+}
+
+.process-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/our\ process.jpg");
+    height: 107vh;
+}
+
+.step p {
+    margin-bottom: 0px;
+}
+
+.process-details {
+    gap: 3px;
+}
+
+.process-details .card {
+    color: #fff;
+    margin: 0px;
+}
+
+/* arrow */
+
+.arrow {
+    animation: slideInFromRight 1s ease-in;
+}
+
+.arrow-left {
+    display: inline-block;
+    margin-left: 12rem;
+    margin-right: 28rem;
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.arrow-right {
+    display: inline-block;
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.arrows {
+    /* border: 2px solid red; */
+}
+
+.card1 {
+    background-color: rgb(1, 44, 1);
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.card2 {
+    background-color: rgb(1, 90, 1);
+    animation: slideInFromBottom 2s ease-in;
+}
+
+.card3 {
+    background-color: rgb(1, 136, 1);
+    animation: slideInFromBottom 3s ease-in;
+}
+
+.detail p {
+    margin-bottom: 20px;
+}
+
+.detail a {
+    background-color: #fff;
+    margin: -5px;
+    transition: all .3s ease-in;
+}
+
+.detail a:hover {
+    border: 2px solid #fff;
+}
+
+/* estimate */
+
+.estimate {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/estimatebg.jpg");
+    height: 80vh;
+    color: black;
+    position: relative;
+}
+
+.estimate::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: -40px;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+.estimate-details {
+    /* color: black; */
+    text-align: end;
+    max-width: 36rem;
+    /* border: 2px solid rebeccapurple; */
+    padding: 5px;
+}
+
+.estimate-graph {
+    align-self: start;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.estimate-btn {
+    margin-right: 0px;
+}
+
+.estimate-border {
+    margin: 0 auto;
+    margin-left: 22rem;
+    max-width: 214px;
+}
+
+/* estimate circle */
+
+.estimate-circle {
+    margin-top: 3rem;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.single-chart {
+    width: 33%;
+    justify-content: space-around;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.orange .circle {
+    stroke: var(--primary-color);
+}
+
+.circular-chart.green .circle {
+    stroke: var(--primary-color);
+}
+
+.circular-chart.blue .circle {
+    stroke: var(--primary-color);
+}
+
+.percentage {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+.circle-lead {
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.circle-content-container {
+    text-align: center;
+}
+
+.circle-content-container h2 {
+    font-size: 30px;
+    margin-top: 2px;
+}
+
+/* testimony */
+
+.testimony-background {
+    color: #333;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(121, 216, 121, 0.5), rgba(121, 216, 121, 0.5));
+}
+
+.testimony-right {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(121, 216, 121, 0.5), rgba(121, 216, 121, 0.5)), url("../images/testimonybg.jpg");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ****About Us Page ***** */
+.about-background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/aboutbg.jpg");
+    position: relative;
+}
+.left-container{
+    margin: 189px auto;
+    text-align: left;
+   
+}
+.what-we-do{
+    height: 68vh;
+}
+.what-we-do .grid{
+    grid-template-columns: 55% 45%;
+    gap: 35px;
+}
+.what-we-do-content, .about-estimate-content,.engage-content{
+    animation: slideInFromLeft 1s ease-in ;
+}
+.about-estimate{
+    background-color: #eee8ea;
+    
+}
+/* ****Eangage us page **** */
+.engage-background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/engagebg.webp");
+    position: relative;
+}
+.left-container h1{
+    font-weight: bolder;
+}
+.engage-our-steps{
+    height: 70vh;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--primary-color);
+    height: 70vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.footer-grid {
+    grid-template-columns: 2fr 1fr 2fr;
+    padding: 10px;
+    margin: 50px;
+}
+
+.footer-email {
+    text-transform: none;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+.footer-btn {
+    background-color: white;
+    position: relative;
+    top: 49px;
+}
+
+.footer-btn:hover {
+    border: 2px solid white;
+}
+
+.footer ul {
+    margin-top: 30px;
+}
+
+.footer p {
+    margin-top: 30px;
+}
+
+.footer-fb {
+    margin-top: 38px;
+    font-size: 30px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.services {
+    margin-top: 42px;
+}
+
+/* Media Query */
+
+/* tablets and under */
+
+@media(max-width:768px) {
+    .grid, .footer-grid, .grid-3,.what-we-do .grid {
+        grid-template-columns: 1fr;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .why-us, .our-videos, .our-process, .estimate, .testimony,.what-we-do,.about-estimate,.engage-our-steps, .footer {
+        height: auto;
+    }
+    .about-estimate{
+        text-align: center;
+    }
+    .why-us-content, .footer-btn {
+        position: static;
+    }
+    .footer-ul {
+        margin-bottom: 20px;
+    }
+    .arrows, .arrow, .view,.about-estimate .border-bottom {
+        display: none;
+    }
+    .estimate-details {
+        text-align: center;
+    }
+    .estimate-border {
+        margin: 0 auto;
+    }
+    .btn {
+        padding: 4px 11px;
+    }
+}
+
+/* mobile */
+
+@media(max-width:500px) {
+    .why-us, .our-videos, .our-process, .estimate, .testimony, .footer, .background {
+        height: auto;
+    }
+    .why-us-content, .footer-btn {
+        position: static;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .circle-content-container h2 {
+        font-size: 20px;
+    }
+    .lead {
+        font-size: 13px;
+    }
+    .secondary-color {
+        font-size: 35px;
+    }
+    .why-us {
+        margin: 0px;
+    }
+    .completed-projects .border-bottom, .arrows, .arrow, .view {
+        display: none;
+    }
+    .footer-menu nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .btn-container a {
+        padding: 4px 11px;
+    }
+    .navbar .container {
+        padding: 0px;
+        text-align: center;
+    }
+    .navbar nav {
+        width: 100%;
+    }
+    .navbar nav ul li {
+        background-color: var(--primary-color);
+        border: 2px solid var(--secondary-color);
+    }
+    .navbar nav ul li a {
+        color: #fff;
+    }
+}
